@@ -6,6 +6,41 @@
 
 using namespace Rcpp;
 
+// shuffle_rowwise
+arma::umat shuffle_rowwise(arma::umat inmat);
+RcppExport SEXP _testingtravis_shuffle_rowwise(SEXP inmatSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< arma::umat >::type inmat(inmatSEXP);
+    rcpp_result_gen = Rcpp::wrap(shuffle_rowwise(inmat));
+    return rcpp_result_gen;
+END_RCPP
+}
+// shuffle_checkerboard
+arma::umat shuffle_checkerboard(IntegerMatrix inmat, int swaps, bool checkerboards_only);
+RcppExport SEXP _testingtravis_shuffle_checkerboard(SEXP inmatSEXP, SEXP swapsSEXP, SEXP checkerboards_onlySEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< IntegerMatrix >::type inmat(inmatSEXP);
+    Rcpp::traits::input_parameter< int >::type swaps(swapsSEXP);
+    Rcpp::traits::input_parameter< bool >::type checkerboards_only(checkerboards_onlySEXP);
+    rcpp_result_gen = Rcpp::wrap(shuffle_checkerboard(inmat, swaps, checkerboards_only));
+    return rcpp_result_gen;
+END_RCPP
+}
+// sri_mat
+arma::mat sri_mat(IntegerMatrix inmat);
+RcppExport SEXP _testingtravis_sri_mat(SEXP inmatSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< IntegerMatrix >::type inmat(inmatSEXP);
+    rcpp_result_gen = Rcpp::wrap(sri_mat(inmat));
+    return rcpp_result_gen;
+END_RCPP
+}
 // choosecpp
 uint64_t choosecpp(uint64_t n, uint64_t k);
 RcppExport SEXP _testingtravis_choosecpp(SEXP nSEXP, SEXP kSEXP) {
@@ -55,6 +90,9 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
+    {"_testingtravis_shuffle_rowwise", (DL_FUNC) &_testingtravis_shuffle_rowwise, 1},
+    {"_testingtravis_shuffle_checkerboard", (DL_FUNC) &_testingtravis_shuffle_checkerboard, 3},
+    {"_testingtravis_sri_mat", (DL_FUNC) &_testingtravis_sri_mat, 1},
     {"_testingtravis_choosecpp", (DL_FUNC) &_testingtravis_choosecpp, 2},
     {"_testingtravis_comb_index", (DL_FUNC) &_testingtravis_comb_index, 2},
     {"_testingtravis_comb_names", (DL_FUNC) &_testingtravis_comb_names, 2},
