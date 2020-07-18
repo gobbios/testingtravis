@@ -6,4 +6,4 @@ r:
   - release
 cache: packages
 
-os: windows
+dist: trusty
