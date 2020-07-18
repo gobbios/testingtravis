@@ -12,3 +12,5 @@ Depends: R (>= 3.3.0)
 Date: 2020-07-18
 RoxygenNote: 7.1.1
 Roxygen: list(old_usage = TRUE)
+Suggests: 
+    testthat
