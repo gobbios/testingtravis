@@ -6,4 +6,4 @@ r:
   - release
 cache: packages
 
-dist: trusty
+os: osx
