@@ -5,3 +5,4 @@ Rplots.pdf
 manual.pdf
 manual.Rmd
 ^\.travis\.yml$
+^appveyor\.yml$
