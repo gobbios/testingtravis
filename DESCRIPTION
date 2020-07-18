@@ -14,3 +14,8 @@ RoxygenNote: 7.1.1
 Roxygen: list(old_usage = TRUE)
 Suggests: 
     testthat
+LinkingTo: 
+    Rcpp,
+    RcppArmadillo
+Imports: 
+    Rcpp
