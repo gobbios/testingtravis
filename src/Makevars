@@ -7,3 +7,6 @@ SHLIB_CXXLD=ccache /usr/local/clang6/bin/clang++
 CXX11 =  /usr/local/clang6/bin/clang++
 CXX98 =  /usr/local/clang6/bin/clang++
 CXX14 =  /usr/local/clang6/bin/clang++
+PKG_CPPFLAGS = -I. -I../inst/include
+## Use the R_HOME indirection to support installations of multiple R version
+PKG_LIBS = `$(R_HOME)/bin/Rscript -e "RcppGSL:::LdFlags()"`
