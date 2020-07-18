@@ -1,0 +1,14 @@
+Package: testingtravis
+Type: Package
+Title: just doing some testing
+Version: 0.1
+Author: Christof Neumann
+Maintainer: Christof Neumann <christofneumann1@gmail.com>
+Description: Really just some testing.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Depends: R (>= 3.3.0)
+Date: 2020-07-18
+RoxygenNote: 7.1.1
+Roxygen: list(old_usage = TRUE)

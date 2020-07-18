@@ -1,0 +1,7 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+testlab
+Rplots.pdf
+manual.pdf
+manual.Rmd
+^\.travis\.yml$
